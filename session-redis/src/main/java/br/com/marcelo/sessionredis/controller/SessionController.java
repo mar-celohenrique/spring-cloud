@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SessionController {
 
     @RequestMapping("/")
-    public String helloAdmin(){
+    public String helloAdmin() {
         return "Hello Admin!";
     }
 
