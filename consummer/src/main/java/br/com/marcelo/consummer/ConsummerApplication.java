@@ -1,13 +1,11 @@
 package br.com.marcelo.consummer;
 
-import configuration.DBLocalConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.FilterType;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +18,7 @@ import javax.annotation.PostConstruct;
 @RestController
 @EnableEurekaClient
 @ComponentScan(basePackages = {"service.**", "br.com.marcelo.**", "configuration.**"}) //, excludeFilters = {
-        //@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = DBLocalConfiguration.class)})
+//@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = DBLocalConfiguration.class)})
 @ImportResource("classpath:applicationContext.xml")
 public class ConsummerApplication {
 
@@ -33,6 +31,8 @@ public class ConsummerApplication {
 
     @Autowired
     String url;
+
+    //-Dspring.profiles.active=local
 
     @PostConstruct
     public void setUp() {
