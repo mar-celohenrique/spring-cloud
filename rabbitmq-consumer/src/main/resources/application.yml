@@ -1,0 +1,11 @@
+spring:
+  rabbitmq:
+    port: 5672
+    host: localhost
+    username: guest
+    password: guest
+
+server:
+  port: 9098
+
+jsa.rabbitmq.queue: "jsa.queue"
