@@ -12,6 +12,9 @@ public class SessionConfig extends AbstractHttpSessionApplicationInitializer {
 
     @Bean
     public JedisConnectionFactory connectionFactory() {
-        return new JedisConnectionFactory();
+        JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory();
+        jedisConnectionFactory.setPort(6379);
+        jedisConnectionFactory.setHostName("192.168.99.100");
+        return jedisConnectionFactory;
     }
 }
