@@ -1,0 +1,5 @@
+---
+applications:
+- name: cache
+  path: cache.jar
+  random-route: true
