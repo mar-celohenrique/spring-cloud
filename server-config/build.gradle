@@ -30,7 +30,11 @@ ext {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.cloud:spring-cloud-config-server')
+    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-monitor
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-config-monitor'
     compile('org.springframework.boot:spring-boot-starter-web')
+    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-stream-rabbit
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-stream-rabbit'
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

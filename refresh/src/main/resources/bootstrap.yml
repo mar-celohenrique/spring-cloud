@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: refresh
+  cloud:
+    config:
+      uri: https://config-server-anxious-quokka.cfapps.io/

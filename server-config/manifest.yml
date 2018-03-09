@@ -1,0 +1,7 @@
+---
+applications:
+- name: config-server
+  memory: 768M
+  instances: 1
+  random-route: true
+  path: server-config.jar

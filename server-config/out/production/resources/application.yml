@@ -1,8 +1,29 @@
 server:
-  port: 9090
+  port: 8080
 spring:
   cloud:
+    bus:
+      enabled: false
     config:
       server:
         git:
           uri: https://github.com/mar-celohenrique/config-files-server
+
+---
+
+spring:
+  profiles: config-monitor
+  cloud:
+    bus:
+      enabled: true
+    config:
+      server:
+        monitor:
+          github:
+            enable: true
+  rabbitmq:
+    host: termite.rmq.cloudamqp.com
+    port: 5672
+    virtual-host: yyogrobz
+    username: yyogrobz
+    password: BBXDbPyZZvP1nUi0Y5y-5midvANB_sNe
